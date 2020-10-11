@@ -1,1 +1,29 @@
 /* Clip-path transition */
+/*  Start state I  */
+.clip-leave {
+  opacity: 1;
+}
+.clip-leave-active {
+  transition: opacity .75s linear;
+}
+.clip-leave-to {
+  opacity: 0;
+}
+
+
+/*   ENTERING CONTAINER  */
+/* Start state II */
+.clip-enter {  
+  clip-path: circle(0%);
+}
+.clip-enter-active {
+  transition: all .75s linear;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+
+}
+/*  Ending state  */
+.clip-enter-to {
+  clip-path: circle(75%);
+}
